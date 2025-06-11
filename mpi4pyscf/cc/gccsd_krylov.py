@@ -378,6 +378,8 @@ def mop(mycc, x):
     """
     #res = x / mycc.precond_vec
     #return res
+    # SY TEST:
+    x = x.astype(np.result_type(x, mycc.precond_vec), copy=False)
     x /= mycc.precond_vec
     return x
 
